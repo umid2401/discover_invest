@@ -97,7 +97,7 @@ function PreviousNextMethods() {
   ]
 
   return (
-    <div className=" slider   mx-auto md:px-28 pt-20  bg-gray-50">
+    <div className=" slider   mx-auto md:px-28 px-8 pt-20  bg-gray-50 truncate">
         <div className=" flex justify-between lg:px-20" 
             data-aos="fade-right"     
             data-aos-delay="70"
@@ -105,19 +105,19 @@ function PreviousNextMethods() {
             data-aos-easing="ease-in-out"
         >
             <div>
-            <h1 className='font-[600] lg:text-[60px]  md:text-[40px] text-[35px] flex'><Minus className='lg:mt-3 mt-[-7px]' size={70} color='#fab448' weight="bold" />Our</h1>
-            <h1 className='font-[600] lg:text-[60px] md:text-[40px] text-[35px] pl-28'>Projects</h1>
+               <h1 className='font-[600] lg:text-[60px]  md:text-[40px] text-[35px] flex'><Minus className='lg:mt-3 mt-[-7px] sm:block hidden' size={70} color='#fab448' weight="bold" />Our</h1>
+              <h1 className='font-[600] lg:text-[60px] md:text-[40px] text-[35px] sm:pl-28 pl-8'>Projects</h1>
             </div>
             
-            <div className="mt-10 flex gap-5" >
+            <div className="mt-10 flex gap-5 px-4 md:px-0 invisible lg:visible" >
                 <button type="button" onClick={previous} >
                     <div className="border-[#fab448] border-solid border p-3 hover:bg-[#fab448] hover:text-white">
-                    <CaretLeft  size={24} weight="bold"  />
+                    <CaretLeft  size={20} weight="bold"  />
                     </div> 
                 </button>
                 <button type="button" onClick={next} >
                     <div className="border-[#fab448] border-solid border p-3 hover:bg-[#fab448] hover:text-white">
-                    <CaretRight size={24} weight="bold" />
+                    <CaretRight size={20} weight="bold" />
                     </div> 
                 </button>
             </div>
@@ -132,8 +132,11 @@ function PreviousNextMethods() {
             Datas.map((item, index)=> (
                 <div key={index} className="mt-16">
                 <img className=" md:w-[300px] md:h-[450px]  sm:px-3 px-0 2xl:px-1" src={item.img} alt="" />
-                <h3 className="sm:px-4 2xl:px-0 font-[600] text-[22px]">{item.name}</h3>
-                <p className="sm:px-4 2xl:px-0  text-[16px]">{item.job}</p>
+                <div className=" text-wrap ">
+                  <h3 className="sm:px-4   text-left  2xl:px-0 font-[600] text-[22px]">{item.name}</h3>
+                  <p className="sm:px-4 2xl:px-0  text-[16px]">{item.job}</p>
+                </div>
+          
                 </div>
             ))
             }

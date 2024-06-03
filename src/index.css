@@ -37,6 +37,24 @@
   background: url("./assets/advantages.png");
   background-repeat: no-repeat;
   object-fit: contain;
+}
 
+.company {
+  background: url("./assets/bg-new.svg");
+  background-repeat: repeat-x !important;
+  object-fit: cover;
+}
+.contact {
+  background: url("./assets/bg-footer.png");
+  background-repeat: repeat-x !important;
+  object-fit: cover;
+}
+
+.contactFull {
+  background: url("./assets/bg-main.jpg");
+  background-repeat: repeat-x !important;
+  object-fit: cover;
 }
  
+ 
+

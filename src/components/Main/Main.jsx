@@ -5,7 +5,7 @@ const Main = () => {
     <div className="main ">
       <video src={VideoBG} autoPlay loop muted />
       <div className="content">
-        <div className='lg:ml-32 sm:ml-16 ml-8  mt-48'>
+        <div className='lg:ml-32 sm:ml-16 ml-8  lg:mt-48 mt-2'>
             <div className='lg:flex lg:flex-col md:flex-row md:flex md:mt-[450px] sm:mt-[350px]  mt-[450px] lg:mt-80 2xl:mt-52'>
                <h1 className='2xl:text-[107px] md:text-[64px]  sm:text-[64px] text-[58px]  xl:text-[70px] lg:text-[54px] font-[600] sm:tracking-widest'>DISCOVER</h1>
                <h1 className='2xl:text-[107px] md:text-[64px] sm:text-[64px] text-[58px]  xl:text-[70px] lg:text-[54px] font-[600] sm:tracking-widest'>INVEST</h1>

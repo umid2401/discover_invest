@@ -1,22 +1,27 @@
- 
- 
-import './App.css'
-import About from './components/About/About'
-import Advantages from './components/Advantages/Advantages'
-import Main from './components/Main/Main'
+ import './App.css'
+ import {Route, Routes } from 'react-router-dom'
 import Navbar from './components/Navbar/Navbar'
-import Team from './components/Team/Team'
+import AboutPage from './pages/AboutPage'
+import HomePage from './pages/HomePage'
+import Projects from './pages/ProjectsPage'
+import CareerPage from './pages/CareerPage'
+import News from './pages/News'
+import ContactPage from './pages/ContactPage'
 
 function App() {
  
 
   return (
     <>
-     <Navbar/>
-     <Main/>
-     {/* <About/> */}
-     <Advantages/>
-     <Team/>
+      <Navbar/>
+      <Routes>
+        <Route path='/' element={<HomePage/>}/>
+        <Route path='/about' element={<AboutPage/>}/>
+        <Route path='/projects' element={<Projects/>}/>
+        <Route path='/career' element={<CareerPage/>}/>
+        <Route path='/news' element={<News/>}/>
+        <Route path="/contacts" element={ <ContactPage/>}/>
+      </Routes>
     </>
   )
 }
