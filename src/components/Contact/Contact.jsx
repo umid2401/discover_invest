@@ -3,10 +3,10 @@ import {Minus, MapPinLine, FacebookLogo, InstagramLogo, TelegramLogo} from "@pho
 
 const Contact = () => {
   return (
-    <div className="flex flex-row lg:flex lg:flex-col w-full contact truncate my-20">
+    <div className="lg:flex lg:flex-row flex  flex-col w-full contact truncate mt-20 md:px-20 sm:px-10 px-4">
 
         {/* contact */}
-        <div className=" lg:w-2/4 w-full sm:pl-20  pl-4 pr-10">
+        <div className=" w-full lg:w-2/3  lg:mr-10 ">
             <h1 className='font-[600] lg:text-[60px]  md:text-[40px] text-[35px] flex'>
                 <Minus className='lg:mt-3 mt-[-7px] sm:block hidden' size={70} color='#fab448' weight="bold" />
                 Contacts
@@ -50,10 +50,12 @@ const Contact = () => {
               <InstagramLogo className="hover:text-[#fab448]"  size={32} weight="fill"/>
               <TelegramLogo className="hover:text-[#fab448]" size={32} weight="fill"/>
             </div>
+        </div>
 
-            {/* form */}
-            <div className="mt-20 bg-white w-full sm:p-16 p-6">
-                <form className="lg:flex lg:flex-row flex  flex-col  lg:gap-8 gap-6">
+         
+        {/* form */}
+        <div className="mt-20 bg-white w-full lg:w-1/3 sm:p-16 px-4 py-10">
+                <form className=" flex  flex-col  lg:gap-8 gap-6">
                     <div  className="flex flex-col"> 
                         <label htmlFor="">Phone number</label>
                         <input type="text" placeholder="+998" className=" bg-gray-300 py-4 px-5 border-none"  />
@@ -62,17 +64,13 @@ const Contact = () => {
                         <label htmlFor="">Name</label>
                         <input type="text" placeholder="What is your name?" className=" bg-gray-300 py-4 px-5 border-none"  />
                     </div>
-                    <div className="w-full">
+                    <div className="w-full text-center">
                         <div className="invisible">invisible</div>
                       <div className="py-4 lg:px-10 border-none bg-[#fab448] px-20 sm:px-32 md:px-64"  >Feedback</div>
                     </div>
                 
                 </form>
             </div>
-        </div>
-
-        {/* map */}
-        <div className="map lg:w-2/4 w-full "></div>
     </div>
   )
 }

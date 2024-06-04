@@ -5,7 +5,7 @@ import News from '../components/News/OurCompany'
 
 const NewsPage = () => {
   return (
-    <div className="mt-32">
+    <div className="2xl:mt-32 xl:mt-28 lg:mt-24">
        <News/>
        <Contact/>
        <Footer/>
