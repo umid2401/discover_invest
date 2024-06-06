@@ -20,7 +20,10 @@ import 'aos/dist/aos.css'; // You can also use <link> for styles
 // ..
 AOS.init();
 
+import { useTranslation } from 'react-i18next'
+
 function PreviousNextMethods() {
+  const { t, i18n } = useTranslation();
   let sliderRef = useRef(null);
   const next = () => {
     sliderRef.slickNext();
@@ -106,7 +109,7 @@ function PreviousNextMethods() {
         >
             <div>
                <h1 className='font-[600] lg:text-[60px]  md:text-[40px] text-[35px] flex'><Minus className='lg:mt-3 mt-[-7px] sm:block hidden' size={70} color='#fab448' weight="bold" />Our</h1>
-              <h1 className='font-[600] lg:text-[60px] md:text-[40px] text-[35px] sm:pl-28 pl-8'>Projects</h1>
+              <h1 className='font-[600] lg:text-[60px] md:text-[40px] text-[35px] sm:pl-28 pl-8'>Team</h1>
             </div>
             
             <div className="mt-10 flex gap-5 px-4 md:px-0 invisible lg:visible" >
@@ -134,7 +137,7 @@ function PreviousNextMethods() {
                 <img className=" md:w-[300px] md:h-[450px]  sm:px-3 px-0 2xl:px-1" src={item.img} alt="" />
                 <div className=" text-wrap ">
                   <h3 className="sm:px-4   text-left  2xl:px-0 font-[600] text-[22px]">{item.name}</h3>
-                  <p className="sm:px-4 2xl:px-0  text-[16px]">{item.job}</p>
+                  <p className="sm:px-4 2xl:px-0  text-[16px]">{t("OurTeamJob")}</p>
                 </div>
           
                 </div>

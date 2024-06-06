@@ -1,0 +1,59 @@
+{
+    "navAbout": "Haqimizda",
+    "navProjects": "Loyihalar",
+    "navCareer": "Caryera",
+    "navNews": "Yangiliklar",
+    "navContacts": "Contact",
+
+    "maintext": "Har jihatda mukammallik",
+    "mainButton1": "Loyihalar",
+    "mainButton2": "Kontaktlar",
+
+    "aboutTitle": "Companiyasi haqida",
+    "aboutTitle2": "DISCOVER INVEST",
+    "aboutText": "Biz nafaqat loyihalarni yaratamiz, balki yangi imkoniyatlarni yaratamiz. Davlat miqyosidagi obyektlarni qurib, kelajakni quramiz. Biz atrof-muhitga e'tibor beramiz: kompaniya binolar va infratuzilmaning qurilishi va ekspluatatsiyasi bilan bog'liq ekologik jihatlar uchun to'liq javobgarlikni o'z zimmasiga oladi.",
+    "aboutWorker": "Xodimlar soni",
+    "aboutWorker2": "loyihalar",
+    "aboutWorker3": "Turar joy majmualari",
+    "aboutWorker4": "Maxsus texnologiyalar",
+    "aboutWorker5": "Bozorda 14 yildan buyon",
+
+    "advantagesTitle": "Bizning",
+    "advantagesTitle2": "Afzalliklarimiz",
+
+    "advantagesCardTitle": "bizning jamoa",
+    "advantagesCardText": "Kompaniya tajribali xodimlarni tanlov asosida qabul qiladi",
+    "advantagesCardTitle2": "Ijobiy mijozlar yondashuvi",
+    "advantagesCardText2": "Bizning veb-saytimizdagi ajoyib ishlarni ko'rib, biz mijozlarimiz ishonchini qozonganligimizga amin bo'lasiz",
+    "advantagesCardTitle3": "Barcha ishlar kafolatlanadi",
+    "advantagesCardText3": "Biz o'z vazifamizni ehtiyotkorlik bilan bajarib, kompaniyamizga bo'lgan ishonchingizni qadrlaymiz. Barcha xatolar aniq tuzatildi",
+
+    "OurTeamTitle": "Bizning",
+    "OurTeamTitle2": "Jamoa",
+    "OurTeamJob": "Loyiha menejeri",
+
+    "ProjectsText": "Magic city - katta ijtimoiy ahamiyatga ega loyiha. Toshkentdagi madaniy-ko'ngilochar klaster yangi diqqatga sazovor joylardan biridir.",
+    "ProjectsText2": "O'zbekiston aholisi uchun qulaylik yaratish uchun yaratilgan ko'p funktsiyali turar joy majmuasi.",
+    "ProjectsText3": "Poytaxtning markazida ulkan turar joy kvartali.",
+    "ProjectsText4": "Fonon - 2020 yilda Italiyaliklar asosida qurilgan O'zbekistondagi zargarlik fabrikasi. Fonon - Markaziy Osiyoda yagona yirik korxona bo'lib, qimmatbaho metallarni Yevropa va Sharq uslubida zargarlik buyumlari ishlab chiqaradi.",
+    "ProjectsText5": "Toshkent City xalqaro biznes markazida joylashgan xalqaro bolalar bog'chasi va maktabi",
+    "ProjectsText6": "Prezident maktabi - iqtidorli bolalarni aniqlash va ularni yuqori malakali mutaxassislar tayyorlashga qaratilgan maxsus davlat ta'lim muassasasi.",
+    "ProjectsButton": "Barcha loyihalar",
+
+    "NewsTitle": "Yangiliklar",
+    "NewsTitleText": "Biz nafaqat loyihalarni yaratamiz, balki yangi imkoniyatlarni yaratamiz. Davlat miqyosidagi obyektlarni qurib, kelajakni quramiz. Biz atrof-muhitga e'tibor beramiz:",
+    "NewsText": "Qurilish loyihasining menejeri kim?",
+    "NewsText2": "Discover Invest barchani kelayotgan Yangi 2023 yil bilan tabriklaydi!",
+    "NewsText3": "O'ZBEKISTON RESPUBLIKASI KONSTITUTSIYASI QABUL QILINGAN KUN",
+    "NewsText4": "Biz sizni Discover Investning keng qurilish obyektlari bilan tanishtirishda davom etamiz.",
+
+    "contact": "Kontaktlar",
+    "contactAdd": "Manzil",
+    "contactAdress": "O'zbekiston, Toshkent, Alisher Navoiy nomidagi O'zbekiston Milliy bog'i",
+    "contactPhone": "Telefon",
+    "contactWorking": "Ish vaqti",
+    "contactPhoneNumber": "Telefon raqami",
+    "contactName": "Ism",
+    "contactSending": "Yuborilmoqda...",
+    "contactFeedback": "Fikr-mulohaza"
+}

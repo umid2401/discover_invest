@@ -3,11 +3,13 @@ import Icon_2 from '../../assets/icon2.svg'
 import Icon_3 from '../../assets/icon3.svg'
 import {Minus} from "@phosphor-icons/react";
 import AOS from 'aos';
-import 'aos/dist/aos.css'; // You can also use <link> for styles
+import 'aos/dist/aos.css'; // You can als
+import { useTranslation } from 'react-i18next'
 // ..
 AOS.init();
 
 const Advantages = () => {
+  const { t, i18n } = useTranslation();
 
   return (
     <div className="advantages w-full h-full mx-auto md:p-28 mt-12" 
@@ -16,8 +18,8 @@ const Advantages = () => {
        data-aos-duration="1000"
        data-aos-easing="ease-in-out"
     > 
-      <h1 className='font-[600] lg:text-[60px]  md:text-[40px] text-[35px] flex'><Minus className='lg:mt-3 mt-[-7px]' size={70} color='#fab448' weight="bold" />Our</h1>
-      <h1 className='font-[600] lg:text-[60px] md:text-[40px] text-[35px] pl-28'>Advantages</h1>
+      <h1 className='font-[600] lg:text-[60px]  md:text-[40px] text-[35px] flex'><Minus className='lg:mt-3 mt-[-7px]' size={70} color='#fab448' weight="bold" />{t("advantagesTitle")}</h1>
+      <h1 className='font-[600] lg:text-[60px] md:text-[40px] text-[35px] pl-28'>{t("advantagesTitle2")}</h1>
        
        <div className='lg:flex-row lg:flex   flex flex-col mt-12'>
               {/* card 1 */}
@@ -28,9 +30,9 @@ const Advantages = () => {
                   data-aos-easing="ease-in-out"
             >
                 <img className='text-rose-600' src={Icon_1} alt="icons" />
-                <h2 className='2xl:text-[26px] xl:text-[23px] lg:text-[18px] text-[23px] font-[600] mt-5'>our team</h2>
+                <h2 className='2xl:text-[26px] xl:text-[23px] lg:text-[18px] text-[23px] font-[600] mt-5'>{t("advantagesCardTitle")}</h2>
                 <p className='2xl:text-[19px] xl:text-[18px] lg:text-[13px] text-[17px]  font-[400] mt-3'>
-                  The company recruits experienced employees on a competitive basis
+                {t("advantagesCardText")}
                 </p>
             </div>
 
@@ -42,9 +44,9 @@ const Advantages = () => {
                     data-aos-easing="ease-in-out"           
             >
                 <img className='text-rose-600' src={Icon_2} alt="icons" />
-                <h2 className='2xl:text-[26px] xl:text-[23px] lg:text-[18px] text-[23px] font-[600] mt-5'>Positive customer approach</h2>
+                <h2 className='2xl:text-[26px] xl:text-[23px] lg:text-[18px] text-[23px] font-[600] mt-5'>{t("advantagesCardTitle2")}</h2>
                 <p className='2xl:text-[19px] xl:text-[18px] lg:text-[13px] text-[17px]  font-[400] mt-3'>
-                   By looking at the great work we have done through our website, you will be sure that we have earned the trust of our customers
+                {t("advantagesCardText2")}
                 </p>
             </div>
               {/* card 3 */}
@@ -56,9 +58,9 @@ const Advantages = () => {
                 data-aos-easing="ease-in-out"
             >
                 <img className='text-rose-600' src={Icon_3} alt="icons" />
-                <h2 className='2xl:text-[26px] xl:text-[23px] lg:text-[18px] text-[23px] font-[600] mt-5'>All work guaranteed</h2>
+                <h2 className='2xl:text-[26px] xl:text-[23px] lg:text-[18px] text-[23px] font-[600] mt-5'>{t("advantagesCardTitle3")}</h2>
                 <p className='2xl:text-[19px] xl:text-[18px] lg:text-[13px] text-[17px]  font-[400] mt-3'>
-                  We perform our mission carefully and appreciate your belief in our company All mistakes were clearly corrected
+                {t("advantagesCardText3")}
                 </p>
             </div>
 

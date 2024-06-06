@@ -14,33 +14,35 @@ import 'aos/dist/aos.css'; // You can also use <link> for styles
 // ..
 AOS.init();
 
+import { useTranslation } from 'react-i18next'
  
 
 function Company() {
+  const { t, i18n } = useTranslation();
 
   const Datas = [
     {
         img: news_1,
         date: "2023-01-27",
-        title: "Who is the project manager of construction?",
+        title: `${t(`NewsText`)}`,
         link: " " 
     },
     {
         img: news_2,
         date: "2022-12-31",
-        title: "Discover Invest congratulates everyone on a coming Happy New Year 2023!",
+        title: `${t(`NewsText2`)}`,
         link: " " 
     },
     {
         img: news_3,
         date: "2022-10-02",
-        title: " THE DAY WHEN THE CONSTITUTION OF THE REPUBLIC OF UZBEKISTAN WAS ADOPTED",
+        title: `${t(`NewsText3`)}`,
         link: " " 
     },
     {
         img: news_4,
         date: "2022-12-19",
-        title: " THE DAY WHEN THE CONSTITUTION OF THE REPUBLIC OF UZBEKISTAN WAS ADOPTED",
+        title: `${t(`NewsText4`)}`,
         link: " " 
     },  
   ]

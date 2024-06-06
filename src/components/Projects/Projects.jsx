@@ -14,7 +14,10 @@ import 'aos/dist/aos.css'; // You can also use <link> for styles
 // ..
 AOS.init();
 
+import { useTranslation } from 'react-i18next'
+
 const Projects = () => {
+  const { t, i18n } = useTranslation();
 
   return (
     <div className='flex flex-col gap-5  mt-40 truncate'
@@ -25,8 +28,8 @@ const Projects = () => {
     >
       {/* title */}
       <div className="xl:px-32 md:px-16 px-4" data-aos="fade-down">
-          <h1 className='font-[600] lg:text-[60px]  md:text-[40px] text-[35px] flex'><Minus className='lg:mt-3 mt-[-7px]' size={70} color='#fab448' weight="bold" />Our</h1>
-          <h1 className='font-[600] lg:text-[60px] md:text-[40px] text-[35px] pl-28'>Projects</h1>
+          <h1 className='font-[600] lg:text-[60px]  md:text-[40px] text-[35px] flex'><Minus className='lg:mt-3 mt-[-7px]' size={70} color='#fab448' weight="bold" />{t("OurTeamTitle")}</h1>
+          <h1 className='font-[600] lg:text-[60px] md:text-[40px] text-[35px] pl-28'>{t("aboutWorker2")}</h1>
       </div>
      
 
@@ -38,8 +41,8 @@ const Projects = () => {
                 <div></div>
                 <div>
                     <h2 className='text-[32px] z-[1000] hover:text-[#fab448]'>Magic City</h2>
-                    <p className='md:text-[19px] text-[12px]'>
-                    Magic city is a large socially significant project. The cultural and entertainment cluster in Tashkent is one of the new attractions.
+                    <p className='md:text-[19px] text-[12px] text-wrap'>
+                    {t("ProjectsText")}
                     </p>
                 </div>
                </div>
@@ -51,8 +54,8 @@ const Projects = () => {
                 <div></div>
                 <div>
                     <h2 className='text-[32px] z-[1000] hover:text-[#fab448]'>Boulevard</h2>
-                    <p className='md:text-[19px] text-[12px]'>
-                       A multifunctional residential complex created to provide comfort to the residents of Uzbekistan.
+                    <p className='md:text-[19px] text-[12px] text-wrap'>
+                       {t("ProjectsText2")}
                     </p>
                 </div>
                </div>
@@ -68,8 +71,8 @@ const Projects = () => {
                 <div></div>
                 <div>
                     <h2 className='text-[32px] z-[1000] hover:text-[#fab448]'>Gardens Residence</h2>
-                    <p className='md:text-[19px] text-[12px]'>
-                       A grandiose residential quarter in the heart of the capital.
+                    <p className='md:text-[19px] text-[12px] text-wrap'>
+                    {t("ProjectsText3")}
                     </p>
                 </div>
                </div>
@@ -81,8 +84,8 @@ const Projects = () => {
                 <div></div>
                 <div>
                     <h2 className='text-[32px] z-[1000] hover:text-[#fab448]'>Fonon</h2>
-                    <p className='md:text-[19px] text-[12px]'>
-                     Fonon is a jewelry factory in Uzbekistan built on the basis of Italian ones in 2020. Fonon is the only large enterprise in Central Asia producing jewelry made of precious metals in European and Oriental style.
+                    <p className='md:text-[19px] text-[12px] text-wrap'>
+                    {t("ProjectsTex4")}
                     </p>
                 </div>
                </div>
@@ -99,8 +102,8 @@ const Projects = () => {
                 <div></div>
                 <div>
                     <h2 className='text-[32px] z-[1000] hover:text-[#fab448]'>Invento</h2>
-                    <p className='md:text-[19px] text-[12px]'>
-                       International kindergarten and school located in the international business center Tashkent City
+                    <p className='md:text-[19px] text-[12px] text-wrap'>
+                    {t("ProjectsText5")}
                     </p>
                 </div>
                </div>
@@ -112,8 +115,8 @@ const Projects = () => {
                 <div></div>
                 <div>
                     <h2 className='text-[32px] z-[1000] hover:text-[#fab448]'>Presidential Schools</h2>
-                    <p className='md:text-[19px] text-[12px]'>
-                       The Presidential School is a specialized public educational institution whose activities are aimed at identifying and educating gifted children to train highly qualified specialists.
+                    <p className='md:text-[19px] text-[12px] text-wrap'>
+                    {t("ProjectsText6")}
                     </p>
                 </div>
                </div>
@@ -123,7 +126,7 @@ const Projects = () => {
           {/* button */}
         <div className='text-center relative mt-20 h-[150px]'>
             <span className='text-center inline absolute top-3  -z-10  text-lg text-[#fab448] border border-solid py-4 px-5 w-[150px] h-[60px] border-[#fab448] mt-[-30px] ml-[20px]'></span>
-            <button type='button' className='text-center text-lg  bg-white border border-solid py-4 px-5 w-[150px] border-[#fab448] hover:mt-[-100px] hover:ml-[20px] hover:bg-[#fab448] hover:text-white'>All projects</button>
+            <button type='button' className='text-center text-lg  bg-white border border-solid py-4 px-5 w-[150px] border-[#fab448] hover:mt-[-100px] hover:ml-[20px] hover:bg-[#fab448] hover:text-white'>{t("ProjectsButton")}</button>
         </div>
        
     </div>

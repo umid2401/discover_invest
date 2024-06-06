@@ -7,6 +7,7 @@ import Projects from './pages/ProjectsPage'
 import CareerPage from './pages/CareerPage'
 import News from './pages/News'
 import ContactPage from './pages/ContactPage'
+import { ToastContainer } from 'react-toastify';
 
 function App() {
  
@@ -22,6 +23,7 @@ function App() {
         <Route path='/news' element={<News/>}/>
         <Route path="/contacts" element={ <ContactPage/>}/>
       </Routes>
+      <ToastContainer/>
     </>
   )
 }

@@ -1,7 +1,42 @@
 import {Minus, MapPinLine} from "@phosphor-icons/react";
+import axios from 'axios';
+import { useState } from "react";
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 const Contact = () => {
+    const [loading, setLoading] = useState(false)
+    const SendMessage = (event) => {
+        setLoading(true)                  
+        event.preventDefault();
+        const token = "6705312033:AAHVpwuQ0eDEM3QfkFvqjRHDMwUDQXcC97Q";
+        const chat_id =1660712160;
+        const url = `https://api.telegram.org/bot${token}/sendMessage`
+        const name = document.getElementById("Input_1").value
+        const phoneNumber = document.getElementById("Input_2").value
+        const Department = document.getElementById("Input_3").value
+        const YourQuestion = document.getElementById("Input_4").value
+
+        const messageContent = `Ismi: ${name} \nPhoneNumber: ${phoneNumber} \nDepartment: ${Department} \nYour question: ${YourQuestion}`
+        
+        axios({
+            url: url,
+            method: "POST",
+            data:{
+              "chat_id": chat_id,
+              "text": messageContent,
+            }
+        }).then((res) => {
+            document.getElementById("myForm2").reset()
+             toast.success("Muvaffaqiyatli Yuborildi")
+        }).catch((error) => {
+            toast.error("Yuborishda xatolik", error);
+        }).finally(()=> {
+            setLoading(false)
+        })
+    }
+
   return (
     <div className="company lg:flex lg:flex-row flex flex-col w-full truncate mt-20">
 
@@ -52,34 +87,34 @@ const Contact = () => {
         <div className="formFull  lg:w-2/4 w-full sm:px-20 px-4 mt-10  mb-28 lg:mb-0 ">
              {/* form */}
              <div className=" py-10 bg-white w-full shadow-2xl ">
-                <form className="flex flex-col sm:w-2/3 mx-auto px-5 sm:px-0  lg:gap-8 gap-6">
+                <form className="flex flex-col sm:w-2/3 mx-auto px-5 sm:px-0  lg:gap-8 gap-6" id='myForm2' onSubmit={SendMessage}>
                 <div  className="flex flex-col mt-4">
                         <label htmlFor="">Name</label>
-                        <input type="text" placeholder="What is your name?" className=" bg-gray-300 py-4 px-5 border-none"  />
+                        <input type="text" id="Input_1" placeholder="What is your name?" required className=" bg-gray-300 py-4 px-5 border-none"  />
                     </div>
                     <div  className="flex flex-col"> 
                         <label htmlFor="">Phone number</label>
-                        <input type="text" placeholder="+998" className=" bg-gray-300 py-4 px-5 border-none"  />
+                        <input type="text" id="Input_2" placeholder="+998" required className=" bg-gray-300 py-4 px-5 border-none"  />
                     </div>
                     <div className="flex flex-col">
                         <label htmlFor="">Department</label>
-                        <select  id="" className=" bg-gray-300 py-4 px-5 border-none">
-                            <option value="">Department</option>
-                            <option value="">Sales department</option>
-                            <option value="">Human Resource department</option>
-                            <option value="">Financial department</option>
-                            <option value="">Accounting</option>
-                            <option value="">Purchasing department</option>
-                            <option value="">Office</option>
+                        <select  id="Input_3" required className="bg-gray-300 py-4 px-5 border-none">
+                            <option value="Department">Department</option>
+                            <option value="Sales department">Sales department</option>
+                            <option value="Human Resource department">Human Resource department</option>
+                            <option value="Financial department">Financial department</option>
+                            <option value="Accounting">Accounting</option>
+                            <option value="Purchasing department">Purchasing department</option>
+                            <option value="Office">Office</option>
                         </select>
                     </div>
                     <div className="flex flex-col">
                       <label htmlFor="">Your question</label>
-                      <textarea className=" bg-gray-300 py-4 px-5 border-none" placeholder="Leave Your question . . ." name="" id="" cols="30" rows="2"></textarea>
+                      <textarea className="bg-gray-300 py-4 px-5 border-none" placeholder="Leave Your question . . ." id="Input_4" cols="30" rows="2" required></textarea>
                     </div>
                     <div className="sm:self-end w-full sm:w-fit text-center">
                         <div className="invisible">invisible</div>
-                      <div className="py-4 px-20  border-none bg-[#fab448]  "  >Feedback</div>
+                      <button type='submit'  className="py-4 px-20  border-none bg-[#fab448]"  loading={loading}> {loading ? "Sending..." : "Feedback"}</button>
                     </div>
                 
                 </form>

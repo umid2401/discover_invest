@@ -3,15 +3,22 @@ import { useState } from 'react';
 import { Link, NavLink } from 'react-router-dom'
 import Logo from '../../assets/favicon.svg'
 import { FacebookLogo, InstagramLogo, TelegramLogo, PhoneCall, List, X} from "@phosphor-icons/react";
+import { useTranslation } from 'react-i18next';
 // import { BookOpenIcon, Bars3BottomRightIcon, XMarkIcon } from '@heroicons/react/24/solid'
 
 const Header = () => {
+    const { t, i18n } = useTranslation();
+    const handlechange = (event) => {
+      const selectedLanguage = event.target.value;
+      i18n.changeLanguage(selectedLanguage)
+    }
+
     let Links =[
-        {name:"About", link:"/about"},
-        {name:"Projects", link:"/projects"},
-        {name:"Career", link:"/career"},
-        {name:"News", link:"/news"},
-        {name:"Contacts", link:"/contacts"},
+        {name:`${t(`navAbout`)}`, link:"/about"},
+        {name:`${t("navProjects")}`, link:"/projects"},
+        {name:`${t("navCareer")}`, link:"/career"},
+        {name:`${t("navNews")}`, link:"/news"},
+        {name:`${t("navContacts")}`, link:"/contacts"},
       ];
       let [open, setOpen] =useState(false);
 
@@ -35,7 +42,7 @@ const Header = () => {
             <ul className={`lg:flex lg:items-center lg:pb-0 pb-12 absolute lg:static bg-white lg:z-auto z-[-1] left-0 w-full lg:w-auto lg:pl-0 pl-9 transition-all duration-500 ease-in ${open ? 'top-12' : 'top-[-590px]'}`}>
                 {
                     Links.map((link) => (
-                    <li className='md:ml-8 lg:my-0  my-8 xl:text-lg'>
+                    <li className='md:ml-8 lg:my-0  my-8 xl:text-lg' key={link.name}>
                       
                         <a href={link.link} className='text-gray-800 hover:text-blue-400 duration-500'> 
                         <NavLink to={link.link}>
@@ -57,10 +64,10 @@ const Header = () => {
                         <a href="#"><TelegramLogo className='hover:text-[#fab448]'  size={21} weight="bold" /></a>
                     </li>
                     <li className='md:ml-8 lg:my-0  my-7 xl:text-lg xl:font-medium'>
-                       <select name="" id="" className='border-none '>
-                         <option className='bg-[#fab448] hover:bg-[#fab448]' value="">UZ</option>
-                         <option className='bg-[#fab448]' value="">ENG</option>
-                         <option className='bg-[#fab448]' value="">RU</option>
+                       <select  className='border-none' name='Lng' id='lng' onChange={handlechange}>
+                         <option className='bg-[#fab448] hover:bg-[#fab448]' value="uz">UZ</option>
+                         <option className='bg-[#fab448]' value="en">ENG</option>
+                         <option className='bg-[#fab448]' value="ru">RU</option>
                        </select>
                     </li>
                     <li className='md:ml-8 lg:my-0  my-7 xl:text-lg'>

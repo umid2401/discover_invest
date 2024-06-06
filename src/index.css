@@ -10,7 +10,7 @@
 
 .main video {
   width: 100%;
-  height: 100vh;
+  height: 79vh;
   object-fit: cover;
 }
 
@@ -28,15 +28,15 @@
 }
 
 .employe {
-  background: url("./assets/about.jpg");
+  background: url("./assets/misson1.jpg");
   background-repeat: no-repeat;
   object-fit: cover;
-  object-position: left;
+ 
 }
 .advantages {
   background: url("./assets/advantages.png");
   background-repeat: no-repeat;
-  object-fit: contain;
+  object-fit: cover;
 }
 
 .company {
@@ -55,6 +55,25 @@
   background-repeat: repeat-x !important;
   object-fit: cover;
 }
+
+.aboutHero {
+  background: url("./assets/bg-main.jpg");
+  background-repeat: repeat-x !important;
+  object-fit: cover;
+  height: 85vh;
+  width: 100%;
+}
+
+ 
+.aboutMission {
+  background: url("./assets/bg-new.svg");
+  background-repeat: repeat-x !important;
+  object-fit: cover;
+}
+
+/* .aboutf {
+  z-index: 999;
+} */
 
  
  
