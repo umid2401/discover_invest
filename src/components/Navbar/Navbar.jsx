@@ -21,7 +21,7 @@ const Header = () => {
         {name:`${t("navContacts")}`, link:"/contacts", id:5},
       ];
       
-      let [menu, setMenu] = useState(1);
+      let [menu, setMenu] = useState(0);
       let [open, setOpen] = useState(false);
 
     return (
