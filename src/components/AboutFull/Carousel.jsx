@@ -2,8 +2,10 @@ import { useState, useEffect, useRef } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { useTranslation } from 'react-i18next'
 
 const Carousel = () => {
+  const { t } = useTranslation();
     const [nav1, setNav1] = useState(null);
     const [nav2, setNav2] = useState(null);
     let sliderRef1 = useRef(null);
@@ -72,7 +74,7 @@ const Carousel = () => {
                 <div className="flex flex-col lg:items-start items-center lg:gap-8 gap-3">
                     <h3 className="font-bold text-4xl">2008</h3>
                     <p className="md:font-bold lg:text-lg text-base text-wrap">
-                        In 2008 the construction company Discover Invest was established.
+                        {t("car2008")}
                     </p>
                 </div>
                 </div>
@@ -84,7 +86,7 @@ const Carousel = () => {
                 <div className="flex flex-col lg:items-start items-center lg:gap-8 gap-3">
                     <h3 className="font-bold text-4xl">2009</h3>
                     <p className="md:font-bold lg:text-lg text-base text-wrap">
-                     In 2009 working on project began at the first construction site. It was a factory for the production of aluminum profiles.
+                      {t("car2009")}
                     </p>
                 </div>
                 </div>
@@ -96,7 +98,7 @@ const Carousel = () => {
                 <div className="flex flex-col lg:items-start items-center lg:gap-8 gap-3">
                     <h3 className="font-bold text-4xl">2011</h3>
                     <p className="md:font-bold lg:text-lg text-base text-wrap">
-                    In 2011 the need for a car park arose and was built so everyone can imagine how big the company is.
+                    {t("car2011")}
                     </p>
                 </div>
                 </div>
@@ -108,7 +110,7 @@ const Carousel = () => {
                 <div className="flex flex-col lg:items-start items-center lg:gap-8 gap-3">
                     <h3 className="font-bold text-4xl">2013</h3>
                     <p className="md:font-bold lg:text-lg text-base text-wrap">
-                       In 2013 the design and architecture department was formed.
+                    {t("car2013")}
                     </p>
                 </div>
                 </div>
@@ -120,7 +122,7 @@ const Carousel = () => {
                     <div className="flex flex-col lg:items-start items-center lg:gap-8 gap-3">
                         <h3 className="font-bold text-4xl">2008</h3>
                         <p className="md:font-bold lg:text-lg text-base text-wrap">
-                            In 2008 the construction company Discover Invest was established.
+                          {t("car2008")}
                         </p>
                     </div>
             </div>
@@ -132,7 +134,7 @@ const Carousel = () => {
                     <div className="flex flex-col lg:items-start items-center lg:gap-8 gap-3">
                         <h3 className="font-bold text-4xl">2009</h3>
                         <p className="md:font-bold lg:text-lg text-base text-wrap">
-                        In 2009 working on project began at the first construction site. It was a factory for the production of aluminum profiles.
+                          {t("car2008")}
                         </p>
                     </div>
                 </div>
@@ -144,7 +146,7 @@ const Carousel = () => {
                     <div className="flex flex-col lg:items-start items-center lg:gap-8 gap-3">
                         <h3 className="font-bold text-4xl">2011</h3>
                         <p className="md:font-bold lg:text-lg text-base text-wrap">
-                         In 2011 the need for a car park arose and was built so everyone can imagine how big the company is.
+                          {t("car2011")}
                         </p>
                     </div>
                 </div>
@@ -156,7 +158,7 @@ const Carousel = () => {
                     <div className="flex flex-col lg:items-start items-center lg:gap-8 gap-3">
                         <h3 className="font-bold text-4xl">2013</h3>
                         <p className="md:font-bold lg:text-lg text-base text-wrap">
-                            In 2013 the design and architecture department was formed.
+                          {t("car2013")}
                         </p>
                     </div>
                 </div>

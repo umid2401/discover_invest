@@ -6,23 +6,24 @@ import p4 from "../../assets/p4.webp"
 import p5 from "../../assets/p5.webp"
 import p6 from "../../assets/p6.webp"
 // icon
-import {Minus} from "@phosphor-icons/react";
+ 
 
 // animation
 import AOS from 'aos';
 import 'aos/dist/aos.css'; // You can also use <link> for styles
 // ..
 AOS.init();
+import { useTranslation } from 'react-i18next'
 
 const Projects = () => {
-
+  const { t } = useTranslation();
   return (
     <div className='flex flex-col gap-5 truncate'>
       {/* title */}
       <div className="lg:flex lg:flex-row flex flex-col  lg:items-center lg:justify-between lg:px-28 px-8 bg-gray-100 py-20">
-          <h1 className='font-[600] lg:text-[60px] md:text-[40px] text-[35px] w-2/4 '>Projects</h1>
+          <h1 className='font-[600] lg:text-[60px] md:text-[40px] text-[35px] w-2/4 '>{t(`navProjects`)}</h1>
           <p className="lg:w-2/4 w-full text-wrap 2xl:text-lg xl:text-base lg:text-sm mt-8 lg:mt-0 ">
-            We don't just create projects, we create new opportunities. By building state-scale facilities, we are building the future. We care about the environment:
+          {t(`MainText`)}
           </p>
       </div>
      
@@ -36,7 +37,7 @@ const Projects = () => {
                 <div>
                     <h2 className='text-[32px] z-[1000] hover:text-[#fab448]'>Magic City</h2>
                     <p className='md:text-[19px] text-[12px] text-wrap'>
-                    Magic city is a large socially significant project. The cultural and entertainment cluster in Tashkent is one of the new attractions.
+                    {t(`ProjectsText`)}
                     </p>
                 </div>
                </div>
@@ -49,7 +50,7 @@ const Projects = () => {
                 <div>
                     <h2 className='text-[32px] z-[1000] hover:text-[#fab448]'>Boulevard</h2>
                     <p className='md:text-[19px] text-[12px] text-wrap'>
-                       A multifunctional residential complex created to provide comfort to the residents of Uzbekistan.
+                    {t(`ProjectsText2`)}
                     </p>
                 </div>
                </div>
@@ -66,7 +67,7 @@ const Projects = () => {
                 <div>
                     <h2 className='text-[32px] z-[1000] hover:text-[#fab448]'>Gardens Residence</h2>
                     <p className='md:text-[19px] text-[12px] text-wrap'>
-                       A grandiose residential quarter in the heart of the capital.
+                    {t(`ProjectsText3`)}
                     </p>
                 </div>
                </div>
@@ -79,7 +80,7 @@ const Projects = () => {
                 <div>
                     <h2 className='text-[32px] z-[1000] hover:text-[#fab448]'>Fonon</h2>
                     <p className='md:text-[19px] text-[12px] text-wrap'>
-                     Fonon is a jewelry factory in Uzbekistan built on the basis of Italian ones in 2020. Fonon is the only large enterprise in Central Asia producing jewelry made of precious metals in European and Oriental style.
+                    {t(`ProjectsText4`)}
                     </p>
                 </div>
                </div>
@@ -97,7 +98,7 @@ const Projects = () => {
                 <div>
                     <h2 className='text-[32px] z-[1000] hover:text-[#fab448]'>Invento</h2>
                     <p className='md:text-[19px] text-[12px] text-wrap'>
-                       International kindergarten and school located in the international business center Tashkent City
+                    {t(`ProjectsText5`)}
                     </p>
                 </div>
                </div>
@@ -110,7 +111,7 @@ const Projects = () => {
                 <div>
                     <h2 className='text-[32px] z-[1000] hover:text-[#fab448]'>Presidential Schools</h2>
                     <p className='md:text-[19px] text-[12px] text-wrap'>
-                       The Presidential School is a specialized public educational institution whose activities are aimed at identifying and educating gifted children to train highly qualified specialists.
+                    {t(`ProjectsTex6`)}
                     </p>
                 </div>
                </div>

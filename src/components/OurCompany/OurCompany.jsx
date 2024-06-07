@@ -4,6 +4,9 @@ import "slick-carousel/slick/slick-theme.css";
 import { useRef } from "react";
 import Slider from "react-slick";
 
+// LInk
+import {NavLink } from 'react-router-dom'
+
 // pictures
 import news_1 from '../../assets/n1.webp'
 import news_2 from '../../assets/n2.webp'
@@ -19,10 +22,11 @@ import AOS from 'aos';
 import 'aos/dist/aos.css'; // You can also use <link> for styles
 // ..
 AOS.init();
-
+import { useTranslation } from 'react-i18next'
  
 
 function Company() {
+  const { t } = useTranslation();
    
   let sliderRef = useRef(null);
   const next = () => {
@@ -80,25 +84,25 @@ function Company() {
     {
         img: news_1,
         date: "2023-01-27",
-        title: "Who is the project manager of construction?",
+        title: `${t("NewsText")}`,
         link: " " 
     },
     {
         img: news_2,
         date: "2022-12-31",
-        title: "Discover Invest congratulates everyone on a coming Happy New Year 2023!",
+        title: `${t("NewsText2")}`,
         link: " " 
     },
     {
         img: news_3,
         date: "2022-10-02",
-        title: " THE DAY WHEN THE CONSTITUTION OF THE REPUBLIC OF UZBEKISTAN WAS ADOPTED",
+        title: `${t("NewsText3")}`,
         link: " " 
     },
     {
         img: news_4,
         date: "2022-12-19",
-        title: " THE DAY WHEN THE CONSTITUTION OF THE REPUBLIC OF UZBEKISTAN WAS ADOPTED",
+        title: `${t("NewsText4")}`,
         link: " " 
     },  
   ]
@@ -114,7 +118,7 @@ function Company() {
         >
             <div>
               <h1 className='font-[600] lg:text-[60px]  md:text-[40px] text-[35px] flex'><Minus className='lg:mt-3 mt-[-7px] sm:block hidden' size={70} color='#fab448' weight="bold" />Company</h1>
-              <h1 className='font-[600] lg:text-[60px] md:text-[40px] text-[35px] sm:pl-28 pl-8'>News</h1>
+              <h1 className='font-[600] lg:text-[60px] md:text-[40px] text-[35px] sm:pl-28 pl-8'>{t("NewsTitle")}</h1>
             </div>
             
             <div className="mt-10 flex gap-5 px-4 md:px-0 invisible lg:visible" >
@@ -145,8 +149,8 @@ function Company() {
                         <img className="w-full h-full " src={item.img} alt="" />
                         <div className="absolute top-0 w-full h-full bg-black opacity-25"></div>
                         <div className="text-wrap absolute text-white bottom-2 z-[100] px-8 ">
-                            <h3 className="sm:px-4  2xl:px-0 font-[600] text-[18px]  ">{item.title}</h3>
-                            <p className="sm:px-4 2xl:px-0   text-[16px]">go there</p>
+                            <h3 className="sm:px-4  2xl:px-0 font-[600] md:text-[18px]  text-[14px] ">{item.title}</h3>
+                            <a className="sm:px-2 2xl:px-0 underline text-blue-400 font-[600] text-[16px]">{t("NewsButton")}</a>
                         </div>
                     </div>
                    
@@ -160,7 +164,11 @@ function Company() {
            {/* button */}
         <div className='text-center relative mt-20 h-[150px]'>
             <span className='text-center inline absolute top-3  -z-10  text-lg text-[#fab448] border border-solid py-4 px-5 w-[150px] h-[60px] border-[#fab448] mt-[-30px] ml-[20px]'></span>
-            <button type='button' className='text-center text-lg  bg-white border border-solid py-4 px-5 w-[150px] border-[#fab448] hover:mt-[-100px] hover:ml-[20px] hover:bg-[#fab448] hover:text-white'>All News</button>
+            <button type='button' className='text-center text-lg  bg-white border border-solid py-4 px-5 w-[150px] border-[#fab448] hover:mt-[-100px] hover:ml-[20px] hover:bg-[#fab448] hover:text-white'>
+               <NavLink to={"/news"}>
+                 All News
+               </NavLink>
+              </button>
         </div>
        
     </div>

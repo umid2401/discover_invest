@@ -1,4 +1,9 @@
 {
+    "MainText": "Biz faqat loyihalarni yaratmaymiz, balki yangi imkoniyatlar yaratamiz. Davlat miqyosidagi obyektlarni qurib, biz kelajakni qurmoqdamiz. Biz atrof-muhit haqida qayg'uramiz:",
+ 
+
+
+
     "navAbout": "Haqimizda",
     "navProjects": "Loyihalar",
     "navCareer": "Caryera",
@@ -17,6 +22,7 @@
     "aboutWorker3": "Turar joy majmualari",
     "aboutWorker4": "Maxsus texnologiyalar",
     "aboutWorker5": "Bozorda 14 yildan buyon",
+    "aboutWorker6": "Kasalxonalar",
 
     "advantagesTitle": "Bizning",
     "advantagesTitle2": "Afzalliklarimiz",
@@ -46,8 +52,10 @@
     "NewsText2": "Discover Invest barchani kelayotgan Yangi 2023 yil bilan tabriklaydi!",
     "NewsText3": "O'ZBEKISTON RESPUBLIKASI KONSTITUTSIYASI QABUL QILINGAN KUN",
     "NewsText4": "Biz sizni Discover Investning keng qurilish obyektlari bilan tanishtirishda davom etamiz.",
+    "NewsButton": "ko'rish",
 
     "contact": "Kontaktlar",
+    "contactText": "Hozirgi shaklni to'ldirib, kontaktlaringizni qoldiring va biz imkon qadar tezroq siz bilan bog'lanamiz.",
     "contactAdd": "Manzil",
     "contactAdress": "O'zbekiston, Toshkent, Alisher Navoiy nomidagi O'zbekiston Milliy bog'i",
     "contactPhone": "Telefon",
@@ -55,5 +63,28 @@
     "contactPhoneNumber": "Telefon raqami",
     "contactName": "Ism",
     "contactSending": "Yuborilmoqda...",
-    "contactFeedback": "Fikr-mulohaza"
+    "contactFeedback": "Fikr-mulohaza",
+    "contactQuestion": "Qanday yordam bera olamiz?",
+    "contactQuestionTitle": "Hozirgi shaklni to'ldirib, kontaktlaringizni qoldiring va biz imkon qadar tezroq siz bilan bog'lanamiz.",
+    "contactFormDepartment": "Bo'lim",
+    "FormDepartmentSale": "Savdo bo'limi",
+    "FormDepartmentHR": "Inson resurslari bo'limi",
+    "FormDepartmentFinancial": "Moliyaviy bo'lim",
+    "FormDepartmentAccaunting": "Buxgalteriya bo'limi",
+    "FormDepartmentPurchasing": "Xarid bo'limi",
+    "FormDepartmentOffice": "Ofis",
+    "FormQuestion": "Sizning savolingiz",
+    "FormQuestionInput": "Savolingizni qoldiring . . .",
+
+    "download": "Yuklab olish",
+    "aboutMission": "Bizning missiyamiz",
+    "aboutMissionText": "Bizning missiyamiz: O'zbekistonda eng ilg'or texnologiyalarni qurilishda joriy etamiz va zamonaviy dizayn yechimlarini yaratamiz. Birinchi darajali ishchilarga tayanib, uzoq yillar davomida arzon uy-joy va sanoat binolarini quramiz.",
+    "aboutVision": "Bizning Vizyonimiz",
+    "aboutVisionText": "Markaziy Osiyoda eng yaxshi loyiha kompaniyasini yaratish, bu imkoniyatni beradi: - Jamiyat - ishlarda yuqori standartlarni belgilash orqali odamlarning turmush darajasini yaxshilash. - Mijozlar - qo'shma faoliyatdan zavqlanish, uzoq muddatli va ochiq munosabatlar qurish. - Xodimlar - doimiy o'sish.",
+    "aboutValue": "Bizning qadriyatlarimiz",
+    "aboutValueText": "Bizning qadriyatlarimiz: 2008 yilda (MChJ) 'Discover Invest' tashkil etilganidan beri biz faqat professional mutaxassislar bilan ishlaymiz. Mutaxassislarimiz ilg'or texnologiyalar va innovatsion yondashuvlardan foydalanadilar. Ish vaqtiga va joyiga qaramay, biz qadriyatlarimizga sodiq qolamiz: xodimlar va xavfsizlik, uzluksiz takomillashtirish va mijozlarimizning ishonchi.",
+    "car2008": "2008 yilda qurilish kompaniyasi Discover Invest tashkil etildi.",
+    "car2009": "2009 yilda birinchi qurilish maydonchasida loyiha ishlari boshlandi. Bu alyuminiy profillar ishlab chiqarish zavodi edi.",
+    "car2011": "2011 yilda avtoparkka ehtiyoj paydo bo'ldi va qurildi, bu orqali kompaniyaning qanchalik katta ekanligini hamma tasavvur qilishi mumkin.",
+    "car2013": "2013 yilda dizayn va arxitektura bo'limi tashkil etildi."
 }

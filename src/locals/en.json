@@ -1,4 +1,9 @@
 {
+   "MainText": "We don't just create projects, we create new opportunities. By building state-scale facilities, we are building the future. We care about the environment:",
+
+
+
+
     "navAbout": "About",
     "navProjects": "Projects",
     "navCareer": "Career",
@@ -17,6 +22,7 @@
     "aboutWorker3" : "Residential complexes",
     "aboutWorker4" : "Special techniques recuperate",
     "aboutWorker5" : "14 years on the market",
+    "aboutWorker6" : "Hospitals",
 
     "advantagesTitle" : "Our",
     "advantagesTitle2" : "Advantages",
@@ -49,9 +55,11 @@
     "NewsText2" : "Discover Invest congratulates everyone on a coming Happy New Year 2023!",
     "NewsText3" : "THE DAY WHEN THE CONSTITUTION OF THE REPUBLIC OF UZBEKISTAN WAS ADOPTED",
     "NewsText4" : "We continue to introduce you to Discover Invest's wide range of construction properties.",
+    "NewsButton": "go there",
 
 
     "contact" : "Contacts",
+    "contactText" : "  Leave your contacts by filling out the current form and we will contact you as soon as possible.",
     "contactAdd" : "Address",
     "contactAdress" : "Uzbekistan, Tashkent, National Park of Uzbekistan named after Alisher Navoiy",
     "contactPhone" : "Phone",
@@ -59,5 +67,29 @@
     "contactPhoneNumber" : "Phone number",
     "contactName" : "Name",
     "contactSending" : "Sending...",
-    "contactFeedback" : "Feedback"
+    "contactFeedback" : "Feedback",
+    "contactQuestion": "How we can  help?",
+    "contactQuestionTitle": "Leave your contacts by filling out the current form and we will contact you as soon as possible.",
+    "contactFormDepartment": "Department",
+    "FormDepartmentSale": "Sales department",
+    "FormDepartmentHR": "Human Resource department",
+    "FormDepartmentFinancial": "Financial department",
+    "FormDepartmentAccaunting": "Accounting department",
+    "FormDepartmentPurchasing": "Purchasing department",
+    "FormDepartmentOffice": "Office",
+    "FormQuestion": "Your question",
+    "FormQuestionInput": "Leave Your question . . .",
+
+    "download": "Download ",
+    "aboutMission": "Our mission ",
+    "aboutMissionText": "     Our mission We introduce the most advanced technologies in construction in Uzbekistan and create modern design solutions. Relying on first-class workers, we build affordable housing and industrial buildings for many years. ",
+    "aboutVision": "Our Vision ",
+    "aboutVisionText": "Creation of the best project company in Central Asia, which provides an opportunity to: - Society - to improve the standard of living of people by setting high standards in work. - Clients - to enjoy joint activities, to build long-term and open relationships. - Employees - constant growth, ",
+    "aboutValue": "Our values",
+    "aboutValueText": " Our values Since the founding (LLC) 'Discover Invest' in 2008, we have been working only with professionals. Our specialists use advanced technologies and an innovative approach to business.Regardless of the time and place of operation, we remain committed to our values: staff and safety, continuous improvement and the trust of our customers.",
+
+    "car2008": " In 2008 the construction company Discover Invest was established.",
+    "car2009": " In 2009 working on project began at the first construction site. It was a factory for the production of aluminum profiles.",
+    "car2011": "In 2011 the need for a car park arose and was built so everyone can imagine how big the company is.",
+    "car2013": "In 2013 the design and architecture department was formed."
 }

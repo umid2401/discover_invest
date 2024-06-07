@@ -81,9 +81,15 @@ const Contact = () => {
 
             {/* icons */}
             <div className="icons flex gap-12 mt-20">
-             <FacebookLogo className="hover:text-[#fab448]" size={32} weight="fill" />
-              <InstagramLogo className="hover:text-[#fab448]"  size={32} weight="fill"/>
-              <TelegramLogo className="hover:text-[#fab448]" size={32} weight="fill"/>
+                <a href="https://business.facebook.com/latest/home?asset_id=866538573482797&nav_ref=push" target="_blank">
+                  <FacebookLogo className="hover:text-[#fab448]" size={32} weight="fill" />
+                </a>
+                <a hrer="https://www.instagram.com/discover_invest/?igshid=ZDdkNTZiNTM%3D" target="_blank">
+                 <InstagramLogo className="hover:text-[#fab448]"  size={32} weight="fill"/>
+                </a>
+                <a href="https://t.me/discovery_invest" target="_blank">
+                  <TelegramLogo className="hover:text-[#fab448]" size={32} weight="fill"/>
+                </a>
             </div>
         </div>
 

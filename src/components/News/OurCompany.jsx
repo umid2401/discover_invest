@@ -5,9 +5,6 @@ import news_3 from '../../assets/n3.webp'
 import news_4 from '../../assets/n4.webp'
  
 
-// icon
-import {Minus, CaretLeft, CaretRight} from "@phosphor-icons/react";
-
 // animation
 import AOS from 'aos';
 import 'aos/dist/aos.css'; // You can also use <link> for styles
@@ -18,7 +15,7 @@ import { useTranslation } from 'react-i18next'
  
 
 function Company() {
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
 
   const Datas = [
     {
@@ -52,9 +49,9 @@ function Company() {
     <div className="company mx-auto  truncate">
          
         <div className="lg:flex lg:flex-row flex flex-col  lg:items-center lg:justify-between lg:px-28 px-8 bg-gray-100 py-20">
-          <h1 className='font-[600] lg:text-[60px] md:text-[40px] text-[35px] w-2/4 '>News</h1>
+          <h1 className='font-[600] lg:text-[60px] md:text-[40px] text-[35px] w-2/4 '>{t(`NewsTitle`)}</h1>
           <p className="w-2/4 text-wrap 2xl:text-lg xl:text-base lg:text-sm mt-8 lg:mt-0 ">
-            We don't just create projects, we create new opportunities. By building state-scale facilities, we are building the future. We care about the environment:
+          {t(`MainText`)}
           </p>
         </div>
         
@@ -69,8 +66,8 @@ function Company() {
                         <img className="w-full h-full " src={item.img} alt="" />
                         <div className="absolute top-0 w-full h-full bg-black opacity-25"></div>
                         <div className="text-wrap absolute text-white bottom-2 z-[100] px-8 ">
-                            <h3 className="sm:px-4  2xl:px-0 font-[600] text-[18px]  ">{item.title}</h3>
-                            <p className="sm:px-4 2xl:px-0   text-[16px]">go there</p>
+                            <h3 className="sm:px-2  2xl:px-0 font-[600] md:text-[18px] text-[14px] ">{item.title}</h3>
+                            <a href='#' className="sm:px-4 2xl:px-0 underline text-blue-400 text-[16px]">{t(`NewsButton`)}</a>
                         </div>
                     </div>
                    

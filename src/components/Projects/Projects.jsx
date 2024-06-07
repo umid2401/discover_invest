@@ -5,6 +5,8 @@ import p3 from "../../assets/p3.webp"
 import p4 from "../../assets/p4.webp"
 import p5 from "../../assets/p5.webp"
 import p6 from "../../assets/p6.webp"
+// Link
+import {NavLink } from 'react-router-dom'
 // icon
 import {Minus} from "@phosphor-icons/react";
 
@@ -17,7 +19,7 @@ AOS.init();
 import { useTranslation } from 'react-i18next'
 
 const Projects = () => {
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
 
   return (
     <div className='flex flex-col gap-5  mt-40 truncate'
@@ -85,7 +87,7 @@ const Projects = () => {
                 <div>
                     <h2 className='text-[32px] z-[1000] hover:text-[#fab448]'>Fonon</h2>
                     <p className='md:text-[19px] text-[12px] text-wrap'>
-                    {t("ProjectsTex4")}
+                    {t("ProjectsText4")}
                     </p>
                 </div>
                </div>
@@ -126,7 +128,11 @@ const Projects = () => {
           {/* button */}
         <div className='text-center relative mt-20 h-[150px]'>
             <span className='text-center inline absolute top-3  -z-10  text-lg text-[#fab448] border border-solid py-4 px-5 w-[150px] h-[60px] border-[#fab448] mt-[-30px] ml-[20px]'></span>
-            <button type='button' className='text-center text-lg  bg-white border border-solid py-4 px-5 w-[150px] border-[#fab448] hover:mt-[-100px] hover:ml-[20px] hover:bg-[#fab448] hover:text-white'>{t("ProjectsButton")}</button>
+            <button type='button' className='text-center text-lg  bg-white border border-solid py-4 px-5 w-[150px] border-[#fab448] hover:mt-[-100px] hover:ml-[20px] hover:bg-[#fab448] hover:text-white'>
+              <NavLink to={"/projects"}>
+                {t("ProjectsButton")}
+              </NavLink>
+              </button>
         </div>
        
     </div>

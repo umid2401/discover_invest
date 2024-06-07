@@ -14,20 +14,22 @@ const Header = () => {
     }
 
     let Links =[
-        {name:`${t(`navAbout`)}`, link:"/about"},
-        {name:`${t("navProjects")}`, link:"/projects"},
-        {name:`${t("navCareer")}`, link:"/career"},
-        {name:`${t("navNews")}`, link:"/news"},
-        {name:`${t("navContacts")}`, link:"/contacts"},
+        {name:`${t(`navAbout`)}`, link:"/about", id:1},
+        {name:`${t("navProjects")}`, link:"/projects", id:2},
+        {name:`${t("navCareer")}`, link:"/career", id:3},
+        {name:`${t("navNews")}`, link:"/news", id:4},
+        {name:`${t("navContacts")}`, link:"/contacts", id:5},
       ];
-      let [open, setOpen] =useState(false);
+      
+      let [menu, setMenu] = useState(1);
+      let [open, setOpen] = useState(false);
 
     return (
         <div className='shadow-md fixed z-[1] bg-transparent   w-full top-0 left-0'>
            <div className='lg:flex items-center justify-between bg-white 2xl:py-10 xl:py-7 lg:py-5 py-3 md:px-10 px-7'>
             {/* logo section */}
             <Link to={"/"}>
-                <div className='font-bold text-lg cursor-pointer flex items-center gap-1 xl:pl-16  2xl:pl-28'>           
+                <div className='font-bold text-lg cursor-pointer flex items-center gap-1 xl:pl-16  2xl:pl-28' onClick={()=>setOpen(false)}>           
                     <img src={Logo} alt="" />
                     <h1>DISCOVER <br /> INVEST</h1>
                 </div>
@@ -42,9 +44,11 @@ const Header = () => {
             <ul className={`lg:flex lg:items-center lg:pb-0 pb-12 absolute lg:static bg-white lg:z-auto z-[-1] left-0 w-full lg:w-auto lg:pl-0 pl-9 transition-all duration-500 ease-in ${open ? 'top-12' : 'top-[-590px]'}`}>
                 {
                     Links.map((link) => (
-                    <li className='md:ml-8 lg:my-0  my-8 xl:text-lg' key={link.name}>
+                    <li className='md:ml-8 lg:my-0  my-8 xl:text-lg' key={link.name}
+                      onClick={()=>setOpen(false)}
+                    >
                       
-                        <a href={link.link} className='text-gray-800 hover:text-blue-400 duration-500'> 
+                        <a href={link.link} className={`text-gray-800 hover:text-blue-400 duration-500 ${menu == link.id ? "border-b-2 border-fuchsia-600":""}`} onClick={()=>setMenu(link.id)}> 
                         <NavLink to={link.link}>
                            {link.name}
                         </NavLink>
@@ -54,26 +58,32 @@ const Header = () => {
                 }
                  
                
-                    <li className='md:ml-8 lg:my-0  my-7 text-lg'>
-                        <a href="#"><FacebookLogo className='hover:text-[#fab448]' size={21} weight="bold" /></a>
+                    <li className='md:ml-8 lg:my-0  my-7 text-lg' onClick={()=>setOpen(false)}>
+                        <a href="https://business.facebook.com/latest/home?asset_id=866538573482797&nav_ref=push" target="_blank">
+                            <FacebookLogo className='hover:text-[#fab448]' size={21} weight="bold" />
+                        </a>
                     </li>
-                    <li className='md:ml-8 lg:my-0  my-7 text-lg'>
-                        <a href="#"><InstagramLogo className='hover:text-[#fab448]'  size={21} weight="bold" /></a>
+                    <li className='md:ml-8 lg:my-0  my-7 text-lg' onClick={()=>setOpen(false)}>
+                        <a href="https://www.instagram.com/discover_invest/?igshid=ZDdkNTZiNTM%3D" target="_blank">
+                            <InstagramLogo className='hover:text-[#fab448]'  size={21} weight="bold" />
+                        </a>
                     </li>
-                    <li className='md:ml-8 lg:my-0  my-7 text-lg'>
-                        <a href="#"><TelegramLogo className='hover:text-[#fab448]'  size={21} weight="bold" /></a>
+                    <li className='md:ml-8 lg:my-0  my-7 text-lg' onClick={()=>setOpen(false)}>
+                        <a href="https://t.me/discovery_invest" target="_blank">
+                            <TelegramLogo className='hover:text-[#fab448]'  size={21} weight="bold" />
+                        </a>
                     </li>
-                    <li className='md:ml-8 lg:my-0  my-7 xl:text-lg xl:font-medium'>
+                    <li className='md:ml-8 lg:my-0  my-7 xl:text-lg xl:font-medium' >
                        <select  className='border-none' name='Lng' id='lng' onChange={handlechange}>
                          <option className='bg-[#fab448] hover:bg-[#fab448]' value="uz">UZ</option>
-                         <option className='bg-[#fab448]' value="en">ENG</option>
+                         <option className='bg-[#fab448]'  value="en">ENG</option>
                          <option className='bg-[#fab448]' value="ru">RU</option>
                        </select>
                     </li>
-                    <li className='md:ml-8 lg:my-0  my-7 xl:text-lg'>
+                    <li className='md:ml-8 lg:my-0  my-7 xl:text-lg' onClick={()=>setOpen(false)}>
                         <a href="#" className='xl:font-bold'>+998 (71) 288 88 88 </a>
                     </li>
-                    <li className='md:ml-8 2xl:pr-28 xl:pr-16 lg:my-0  '>
+                    <li className='md:ml-8 2xl:pr-28 xl:pr-16 lg:my-0 ' onClick={()=>setOpen(false)}>
                         <a href="#" className='font-bold '><PhoneCall className='hover:text-[#fab448]'  size={24} weight="fill"   /> </a>
                     </li>
               

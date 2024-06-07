@@ -3,9 +3,11 @@ import axios from 'axios';
 import { useState } from "react";
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { useTranslation } from 'react-i18next'
 
 
 const Contact = () => {
+    const { t } = useTranslation();
     const [loading, setLoading] = useState(false)
     const SendMessage = (event) => {
         setLoading(true)                  
@@ -42,12 +44,12 @@ const Contact = () => {
 
         {/* contact */}
         <div className=" lg:w-2/4 w-full sm:pl-32 pl-8 pr-10 mb-28">
-            <h1 className='font-[600] lg:text-[60px]  md:text-[40px] text-[35px] flex text-center'>
+            <h1 className=' w-[400px] text-wrap font-[600] lg:text-[60px]  md:text-[40px] text-[35px] flex text-center'>
                 <Minus className='lg:mt-3 mt-[-7px] sm:block hidden' size={70} color='#fab448' weight="bold" />
-                How we can <br /> help?
+                {t(`contactQuestion`)}
             </h1>
             <p className="text-wrap">
-               Leave your contacts by filling out the current form and we will contact you as soon as possible.
+              {t(`contactQuestionTitle`)}
             </p>
 
             {/* info */}
@@ -55,17 +57,17 @@ const Contact = () => {
                 <div className="  w-full">
                     <h2 className="font-bold 2xl:text-2xl lg:text-lg flex">
                     <MapPinLine  size={32} color="#fab448" />
-                        <span className="ml-6">Address</span>
+                        <span className="ml-6">  {t(`contactAdd`)}</span>
                     </h2>
                     <p className="text-wrap text-gray-500 ml-12 text-base mt-4">
-                    Uzbekistan, Tashkent, National Park of Uzbekistan named after Alisher Navoi
+                      {t(`contactAdress`)}
                     </p>
                 </div>
 
                 <div className="  w-full">
                     <h2 className="font-bold 2xl:text-2xl lg:text-lg flex">
                     <MapPinLine  size={32} color="#fab448" />
-                        <span className="ml-6 ">Phone</span>
+                        <span className="ml-6 ">{t(`contactPhone`)}</span>
                     </h2>
                     <p className="text-wrap text-gray-500 ml-12 text-base mt-4">
                       +998 71 288 88 88
@@ -74,7 +76,7 @@ const Contact = () => {
                 <div className="  w-full">
                     <h2 className="font-bold 2xl:text-2xl lg:text-lg flex">
                     <MapPinLine  size={32} color="#fab448" />
-                        <span className="ml-6">Working hours</span>
+                        <span className="ml-6">{t(`contactWorking`)}</span>
                     </h2>
                     <p className="text-wrap text-gray-500 ml-12 text-base mt-4">
                       09:00 - 18:00 Mon-Sat
@@ -89,32 +91,32 @@ const Contact = () => {
              <div className=" py-10 bg-white w-full shadow-2xl ">
                 <form className="flex flex-col sm:w-2/3 mx-auto px-5 sm:px-0  lg:gap-8 gap-6" id='myForm2' onSubmit={SendMessage}>
                 <div  className="flex flex-col mt-4">
-                        <label htmlFor="">Name</label>
+                        <label htmlFor="">{t(`contactName`)}</label>
                         <input type="text" id="Input_1" placeholder="What is your name?" required className=" bg-gray-300 py-4 px-5 border-none"  />
                     </div>
                     <div  className="flex flex-col"> 
-                        <label htmlFor="">Phone number</label>
+                        <label htmlFor="">{t(`contactPhoneNumber`)}</label>
                         <input type="text" id="Input_2" placeholder="+998" required className=" bg-gray-300 py-4 px-5 border-none"  />
                     </div>
                     <div className="flex flex-col">
-                        <label htmlFor="">Department</label>
+                        <label htmlFor="">{t(`contactFormDepartment`)}</label>
                         <select  id="Input_3" required className="bg-gray-300 py-4 px-5 border-none">
-                            <option value="Department">Department</option>
-                            <option value="Sales department">Sales department</option>
-                            <option value="Human Resource department">Human Resource department</option>
-                            <option value="Financial department">Financial department</option>
-                            <option value="Accounting">Accounting</option>
-                            <option value="Purchasing department">Purchasing department</option>
-                            <option value="Office">Office</option>
+                            <option value="Department">{t(`contactFormDepartment`)}</option>
+                            <option value="Sales department">{t(`FormDepartmentSale`)}</option>
+                            <option value="Human Resource department">{t(`FormDepartmentHR`)}</option>
+                            <option value="Financial department">{t(`FormDepartmentFinancial`)}</option>
+                            <option value="Accounting">{t(`FormDepartmentAccaunting`)}</option>
+                            <option value="Purchasing department">{t(`FormDepartmentPurchasing`)}</option>
+                            <option value="Office">{t(`FormDepartmentOffice`)}</option>
                         </select>
                     </div>
                     <div className="flex flex-col">
-                      <label htmlFor="">Your question</label>
-                      <textarea className="bg-gray-300 py-4 px-5 border-none" placeholder="Leave Your question . . ." id="Input_4" cols="30" rows="2" required></textarea>
+                      <label htmlFor="">{t(`FormQuestion`)}</label>
+                      <textarea className="bg-gray-300 py-4 px-5 border-none" placeholder={t(`FormQuestionInput`)} id="Input_4" cols="30" rows="2" required></textarea>
                     </div>
                     <div className="sm:self-end w-full sm:w-fit text-center">
                         <div className="invisible">invisible</div>
-                      <button type='submit'  className="py-4 px-20  border-none bg-[#fab448]"  loading={loading}> {loading ? "Sending..." : "Feedback"}</button>
+                      <button type='submit'  className="py-4 px-20  border-none bg-[#fab448]"  loading={loading}>{loading ? `${t(`contactSending`)}` : `${t(`contactFeedback`)}`}</button>
                     </div>
                 
                 </form>

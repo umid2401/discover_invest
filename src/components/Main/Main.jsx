@@ -1,8 +1,9 @@
 import VideoBG from '../../assets/Ташкент_сити_Hilton_Congress_Hall_online_video_cutter_com.mp4'
 import { useTranslation } from 'react-i18next'
+import {NavLink } from 'react-router-dom'
 
 const Main = () => {
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
   return (
     <div className="main ">
       <video src={VideoBG} autoPlay loop muted />
@@ -15,8 +16,12 @@ const Main = () => {
               <p className='sm:text-[28px] font-[400] mt-3'>{t("maintext")}</p>
             
               <div className='mt-5 flex gap-8 pr-10'>
-                <a className='bg-[#fab448] hover:bg-white hover:text-black py-3 w-[150px] text-center text-lg cursor-pointer block'>{t("mainButton1")}</a>
-                <a className='bg-[#fab448] hover:bg-white hover:text-black  py-3 w-[150px] text-center text-lg cursor-pointer block'>{t("mainButton2")}</a>
+                <NavLink to={"/projects"}>
+                 <a className='bg-[#fab448] hover:bg-white hover:text-black py-3 es:w-[150px] w-[120px] text-center es:text-lg cursor-pointer block'>{t("mainButton1")}</a>
+                </NavLink>
+                <NavLink to={"/contacts"}>
+                  <a className='bg-[#fab448] hover:bg-white hover:text-black  py-3 es:w-[150px] w-[120px] text-center es:text-lg cursor-pointer block'>{t("mainButton2")}</a>
+                </NavLink>
               </div>
              
         </div>
