@@ -150,7 +150,9 @@ function Company() {
                         <div className="absolute top-0 w-full h-full bg-black opacity-25"></div>
                         <div className="text-wrap absolute text-white bottom-2 z-[100] px-8 ">
                             <h3 className="sm:px-4  2xl:px-0 font-[600] md:text-[18px]  text-[14px] ">{item.title}</h3>
-                            <a className="sm:px-2 2xl:px-0 underline text-blue-400 font-[600] text-[16px]">{t("NewsButton")}</a>
+                            <NavLink to={"/news"}> 
+                              <a className="sm:px-2 2xl:px-0 underline text-blue-400 font-[600] text-[16px]">{t("NewsButton")}</a>
+                            </NavLink>
                         </div>
                     </div>
                    
