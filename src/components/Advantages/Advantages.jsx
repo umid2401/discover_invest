@@ -12,7 +12,7 @@ const Advantages = () => {
   const { t, i18n } = useTranslation();
 
   return (
-    <div className="advantages w-full h-full mx-auto md:p-28 mt-12" 
+    <div className="advantages w-full max-w-[1920px] h-full mx-auto md:p-28 mt-12" 
       data-aos="fade-right"     
        data-aos-delay="70"
        data-aos-duration="1000"

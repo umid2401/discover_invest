@@ -6,6 +6,9 @@ export default {
   ],
   theme: {
     extend: {},
+    fontFamily: {
+      muli: ['Muli', 'sans-serif'],
+    },
     screens: {
       'es': '400px',
       // => @media (min-width: 400px) { ... }

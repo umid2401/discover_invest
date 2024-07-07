@@ -5,7 +5,7 @@ import {NavLink } from 'react-router-dom'
 const Main = () => {
   const { t } = useTranslation();
   return (
-    <div className="main ">
+    <div className="main w-[100%] max-w-[1920px] mx-auto ">
       <video src={VideoBG} autoPlay loop muted />
       <div className="content">
         <div className='lg:ml-32 sm:ml-16 ml-8  lg:mt-48 mt-2'>

@@ -46,7 +46,7 @@ function Company() {
 
 
   return (
-    <div className="company mx-auto  truncate">
+    <div className="company mx-auto  truncate ">
          
         <div className="lg:flex lg:flex-row flex flex-col  lg:items-center lg:justify-between lg:px-28 px-8 bg-gray-100 py-20">
           <h1 className='font-[600] lg:text-[60px] md:text-[40px] text-[35px] w-2/4 '>{t(`NewsTitle`)}</h1>

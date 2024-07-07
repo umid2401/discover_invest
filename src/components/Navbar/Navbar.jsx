@@ -25,7 +25,7 @@ const Header = () => {
       let [open, setOpen] = useState(false);
 
     return (
-        <div className='shadow-md fixed z-[1] bg-transparent   w-full top-0 left-0'>
+        <div className='shadow-md  bg-transparent  !mx-auto block  w-[100%] max-w-[1920px]  top-0 '>
            <div className='lg:flex items-center justify-between bg-white 2xl:py-10 xl:py-7 lg:py-5 py-3 md:px-10 px-7'>
             {/* logo section */}
             <Link to={"/"}>
@@ -44,7 +44,7 @@ const Header = () => {
             <ul className={`lg:flex lg:items-center lg:pb-0 pb-12 absolute lg:static bg-white lg:z-auto z-[-1] left-0 w-full lg:w-auto lg:pl-0 pl-9 transition-all duration-500 ease-in ${open ? 'top-12' : 'top-[-590px]'}`}>
                 {
                     Links.map((link) => (
-                    <li className='md:ml-8 lg:my-0  my-8 xl:text-lg' key={link.name}
+                    <li className='md:ml-8 lg:my-0 font-muli my-8 xl:text-lg' key={link.name}
                       onClick={()=>setOpen(false)}
                     >
                       

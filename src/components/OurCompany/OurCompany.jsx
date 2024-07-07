@@ -109,7 +109,7 @@ function Company() {
 
 
   return (
-    <div className="company slider   mx-auto md:pl-28 px-8 pt-20 truncate">
+    <div className="company slider w-full max-w-[1920px]   mx-auto md:pl-28 px-8 pt-20 truncate">
         <div className=" flex justify-between lg:px-20" 
             data-aos="fade-right"     
             data-aos-delay="70"

@@ -11,7 +11,7 @@ import { useTranslation } from 'react-i18next'
 const About = () => {
     const { t,} = useTranslation();
   return (
-   <div className='aboutf mt-[-50px] z-50 bg-white lg:px-28 sm:px-10 px-5 truncate'>
+   <div className='aboutf w-[100%] max-w-[1920px] mx-auto mt-[-50px] z-50 bg-white lg:px-28 sm:px-10 px-5 truncate'>
        <div className="about ">
        <div className="lg:flex lg:flex-row gap-8 flex flex-col  w-full">
             <div className='lg:w-2/4  w-full ' data-aos="fade-right"  data-aos-offset="200" data-aos-delay="100" data-aos-duration="1000">
